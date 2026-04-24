@@ -1,9 +1,9 @@
 //Code from https://github.com/gapitio/gapit-htmlgraphics-panel
 import React from 'react';
 import { StandardEditorProps } from '@grafana/data';
-import { CodeEditor, useTheme } from '@grafana/ui';
+import { CodeEditor, useTheme2 } from '@grafana/ui';
 import AutoSizer from 'react-virtualized-auto-sizer';
-import { css } from 'emotion';
+import { css } from '@emotion/css';
 
 interface Props extends StandardEditorProps<string, any, any> {}
 
@@ -11,12 +11,12 @@ export const PanelOptionCode: React.FC<Props> = ({ value, item, onChange }) => {
   if (typeof value !== 'string') {
     value = JSON.stringify(value, null, 2);
   }
-  const theme = useTheme();
+  const theme = useTheme2();
   return (
     <AutoSizer
       disableHeight
       className={css`
-        margin-bottom: ${theme.spacing.sm};
+        margin-bottom: ${theme.spacing(1)};
       `}
     >
       {({ width }) => (

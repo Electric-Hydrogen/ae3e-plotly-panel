@@ -1,32 +1,27 @@
 {
   "name": "ae3e-plotly-panel",
-  "version": "0.5.0",
+  "version": "0.6.0",
   "description": "Grafana Plotly Panel",
   "scripts": {
-    "build": "grafana-toolkit plugin:build",
+    "build": "grafana-toolkit plugin:build --skipTest",
     "test": "grafana-toolkit plugin:test",
     "dev": "grafana-toolkit plugin:dev --watch",
-    "sign": "npx @grafana/toolkit plugin:sign",
+    "sign": "npx @grafana/sign-plugin@latest",
     "md5": "certutil -hashfile ae3e-plotly-panel-%npm_package_version%.zip MD5"
   },
   "author": "AE3E",
   "license": "Apache-2.0",
   "devDependencies": {
-    "@babel/preset-env": "7.5.5",
-    "@grafana/data": "8.0.3",
-    "@grafana/runtime": "8.0.3",
-    "@grafana/toolkit": "8.0.3",
-    "@grafana/ui": "8.0.3"
+    "@emotion/css": "^11.0.0",
+    "@grafana/data": "9.5.17",
+    "@grafana/runtime": "9.5.17",
+    "@grafana/toolkit": "9.5.21",
+    "@grafana/ui": "9.5.17"
   },
   "dependencies": {
-    "@emotion/core": "^10.0.27",
     "deepmerge": "^4.2.2",
-    "emotion": "^10.0.27",
     "plotly.js": "1.58.4",
     "react-plotly.js": "2.5.1",
     "react-virtualized-auto-sizer": "^1.0.5"
-  },
-  "resolutions": {
-    "@babel/preset-env": "7.5.5"
   }
 }
