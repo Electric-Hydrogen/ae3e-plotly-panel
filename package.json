@@ -13,16 +13,16 @@
   "license": "Apache-2.0",
   "devDependencies": {
     "@babel/preset-env": "7.5.5",
-    "@grafana/data": "8.0.3",
-    "@grafana/runtime": "8.0.3",
-    "@grafana/toolkit": "8.0.3",
-    "@grafana/ui": "8.0.3"
+    "@grafana/data": "12.4.2",
+    "@grafana/runtime": "12.4.2",
+    "@grafana/toolkit": "10.1.10",
+    "@grafana/ui": "12.4.2"
   },
   "dependencies": {
     "@emotion/core": "^10.0.27",
     "deepmerge": "^4.2.2",
     "emotion": "^10.0.27",
-    "plotly.js": "1.58.4",
+    "plotly.js": "3.5.0",
     "react-plotly.js": "2.5.1",
     "react-virtualized-auto-sizer": "^1.0.5"
   },
