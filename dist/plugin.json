@@ -21,12 +21,12 @@
       {"name": "Panel", "path": "img/panel.png"}
     ],
     "version": "0.6.0",
-    "updated": "2026-04-24"
+    "updated": "2026-04-25"
   },
 
   "dependencies": {
     "grafanaDependency": ">=10.0.0",
-    "grafanaVersion": "10.x",
+    "grafanaVersion": "12.x",
     "plugins": []
   }
 }
