@@ -17,12 +17,12 @@
       {"name": "Website", "url": "https://github.com/Electric-Hydrogen/ae3e-plotly-panel"}
     ],
     "version": "0.6.0",
-    "updated": "2026-04-27"
+    "updated": "2026-04-28"
   },
 
   "dependencies": {
-    "grafanaDependency": ">=10.0.0",
-    "grafanaVersion": "12.x",
+    "grafanaDependency": ">=13.0.0",
+    "grafanaVersion": "13.x",
     "plugins": []
   }
 }
