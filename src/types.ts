@@ -40,8 +40,8 @@ export const defaults: SimpleOptions = {
   frames: [],
   script: `console.log(data)
 var trace = {
-  x: data.series[0].fields[0].values.buffer,
-  y: data.series[0].fields[1].values.buffer
+  x: data.series[0].fields[0].values,
+  y: data.series[0].fields[1].values
 };
   
 return {data:[trace],layout:{title:'My Chart'}};`,

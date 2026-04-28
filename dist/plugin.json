@@ -1,12 +1,12 @@
 {
   "type": "panel",
   "name": "Plotly panel",
-  "id": "ae3e-plotly-panel",
+  "id": "eh2-ae3e-plotly-panel",
 
   "info": {
     "description": "Render chart from any datasource with Plotly javascript library",
     "author": {
-      "name": "AE3E"
+      "name": "AE3E+EH2"
     },
     "keywords": ["Plotly"],
     "logos": {
@@ -14,19 +14,15 @@
       "large": "img/plotly.svg"
     },
     "links": [
-      {"name": "Website", "url": "https://github.com/ae3e/ae3e-plotly-panel"}
+      {"name": "Website", "url": "https://github.com/Electric-Hydrogen/ae3e-plotly-panel"}
     ],
-    "screenshots": [
-      {"name": "Editor", "path": "img/editor.png"},
-      {"name": "Panel", "path": "img/panel.png"}
-    ],
-    "version": "0.4.0",
-    "updated": "2021-08-09"
+    "version": "0.6.0",
+    "updated": "2026-04-28"
   },
 
   "dependencies": {
-    "grafanaDependency": ">=7.5.5",
-    "grafanaVersion": "7.x",
+    "grafanaDependency": ">=13.0.0",
+    "grafanaVersion": "13.x",
     "plugins": []
   }
 }

@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import { PanelProps } from '@grafana/data';
-import { getTemplateSrv, getLocationSrv } from '@grafana/runtime';
+import { getTemplateSrv, locationService } from '@grafana/runtime';
 import { SimpleOptions, defaults } from 'types';
 import merge from 'deepmerge';
 import _ from 'lodash';
@@ -50,7 +50,7 @@ export class SimplePanel extends PureComponent<Props> {
     let error: any;
     try {
       if (this.props.options.script !== '' && this.props.data.state !== 'Error') {
-        var f = new Function('data,variables', this.props.options.script);
+      const f = new Function('data,variables', this.props.options.script);
         parameters = f(this.props.data, context);
         if (!parameters) {
           throw new Error('Script must return values');
@@ -118,8 +118,10 @@ export class SimplePanel extends PureComponent<Props> {
           useResizeHandler={true}
           onClick={(data) => {
             //console.log(data)
-            var f = new Function('data', 'getLocationSrv', 'getTemplateSrv', this.props.options.onclick);
-            f(data, getLocationSrv, getTemplateSrv);
+            // getLocationSrv was removed in Grafana 10; expose locationService under the
+            // old name so existing onclick scripts calling getLocationSrv() still resolve.
+            const f = new Function('data', 'getLocationSrv', 'getTemplateSrv', this.props.options.onclick);
+            f(data, () => locationService, getTemplateSrv);
           }}
         ></Plot>
       );
